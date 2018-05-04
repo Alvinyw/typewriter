@@ -4,27 +4,53 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>typewriter</title>
 <script src="jquery.min.js"></script>
-<script src="typewriter.js"></script>
+<script src="typewriter.min.js"></script>
 <style>
-html { min-height: 110%; }
-body { margin: 0; padding: 0; background: #ffe; overflow: auto }
-#main { width:600px; margin:30px auto; padding:15px 20px;}
-#code { color: #333; font-family: "Consolas", "Monaco", "Bitstream Vera Sans Mono", "Courier New", "sans-serif"; font-size: 12px; line-height: 24px; }
-#code .string { color: #2a36ff }
-#code .keyword { color: #7f0055; font-weight: bold }
-#code .space { margin-left: 7px }
-#code .comments { color: #3f7f5f }
-#code .chin { letter-spacing: 2px; }
-#code .pl10 { padding-left: 10px; }
+#main { margin:0 auto 50px; width:485px;}
+.item { padding:15px; min-height:242px; line-height:26px; border:2px solid #ccc; border-radius:3px;}
+/**/
+#htmlTxt { color: #333; font-family: "Consolas", "Monaco", "Bitstream Vera Sans Mono", "Courier New", "sans-serif"; font-size: 12px; line-height: 24px; }
+#htmlTxt .string { color: #2a36ff }
+#htmlTxt .keyword { color: #7f0055; font-weight: bold }
+#htmlTxt .space { margin-left: 7px }
+#htmlTxt .comments { color: #3f7f5f }
+#htmlTxt .chin { letter-spacing: 2px; }
+#htmlTxt .pl10 { padding-left: 10px; }
 </style>
 </head>
 
 <body>
-<audio autoplay="autopaly">
-    <source src="saveme.mp3" type="audio/mp3" />
-</audio>
 <div id="main">
-    <div id="code" style="display:none;"> <span class="comments">/**</span><br />
+	<h2>1、打印纯英文</h2>
+    <div class="item">
+    Dynamic Web TWAIN is a browser-based document scanning SDK specifically designed for web applications. With just a few lines of JavaScript code, you can develop robust applications to scan documents from TWAIN, SANE and ICA compatible scanners, edit the scanned images and save them to a local/server file system or document repository.If you need to implement document scanning into your .NET WinForms or WPF application, you can check out our Dynamic .NET TWAIN SDK.
+    </div>
+    <h2>2、打印纯中文</h2>
+    <div class="item">
+    一天叶子离开了,它问树：你为什么不挽留我，树默默的说：因为风在追你，所以我选择了放弃；叶子问风：你为什么要追求我，风平淡的回答：因为树放弃了你，我看你孤独就追你了。叶子沉默了，是树太懦弱，还是自己太傻。
+　　终有一天叶子感到筋疲力尽了，于是选择了随风漂泊，它问树：你为什么不挽留我?树骄傲的说：世界上不只有你一片叶子；叶子伤心走了，它问风：你为什么要追求我，风真诚的回答：因为世界上没有相同的两片叶子。叶子沉默了，是树不懂得爱,还是风太执着。
+    </div>
+    <h2>3、打印代码块</h2>
+    <pre class="item" style="white-space:pre-wrap">
+&lt;input type="button" value="Scan" onclick="AcquireImage();" />
+&lt;script type="text/javascript">
+var DWObject;
+function Dynamsoft_OnReady(){
+    DWObject = Dynamsoft.WebTwainEnv.GetWebTwain('dwtcontrolContainer');
+}
+function AcquireImage(){
+    if(DWObject) {
+        DWObject.IfDisableSourceAfterAcquire = true;
+        DWObject.SelectSource();
+        DWObject.OpenSource();
+        DWObject.AcquireImage();
+    }
+}
+&lt;/script>
+    </pre>
+    <h2>4、打印带样式的 html 文本</h2>
+    <div id="htmlTxt" class="item">
+    	<span class="comments">/**</span><br />
         <span class="comments pl10">*2015—10-08,</span><br />
         <span class="comments pl10">*2017-02-14.</span><br />
         <span class="comments">*/</span><br />
@@ -50,11 +76,11 @@ body { margin: 0; padding: 0; background: #ffe; overflow: auto }
         I want to say:<br />
         Baby, I love you forever;<br />
         <br />
-        -- Alvin</div>
-      <div id="text">Dynamsoft Barcode Reader SDK.</div>
+        -- Alvin
+    </div>
 </div>
 <script>
-$("#text").typewriter();
+$(".item").typewriter();
 </script>
 </body>
 </html>
