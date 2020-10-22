@@ -1,37 +1,78 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html
+    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>typewriter</title>
-<script src="jquery.min.js"></script>
-<script src="typewriter.min.js"></script>
-<style>
-#main { margin:0 auto 50px; width:485px;}
-.item { padding:15px; min-height:242px; line-height:26px; border:2px solid #ccc; border-radius:3px;}
-/**/
-#htmlTxt { color: #333; font-family: "Consolas", "Monaco", "Bitstream Vera Sans Mono", "Courier New", "sans-serif"; font-size: 12px; line-height: 24px; }
-#htmlTxt .string { color: #2a36ff }
-#htmlTxt .keyword { color: #7f0055; font-weight: bold }
-#htmlTxt .space { margin-left: 7px }
-#htmlTxt .comments { color: #3f7f5f }
-#htmlTxt .chin { letter-spacing: 2px; }
-#htmlTxt .pl10 { padding-left: 10px; }
-</style>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>typewriter</title>
+    <script src="jquery.min.js"></script>
+    <script src="typewriter.min.js"></script>
+    <style>
+        #main {
+            margin: 0 auto 50px;
+            width: 485px;
+        }
+
+        .item {
+            padding: 15px;
+            min-height: 242px;
+            line-height: 26px;
+            border: 2px solid #ccc;
+            border-radius: 3px;
+        }
+
+        /**/
+        #htmlTxt {
+            color: #333;
+            font-family: "Consolas", "Monaco", "Bitstream Vera Sans Mono", "Courier New", "sans-serif";
+            font-size: 12px;
+            line-height: 24px;
+        }
+
+        #htmlTxt .string {
+            color: #2a36ff
+        }
+
+        #htmlTxt .keyword {
+            color: #7f0055;
+            font-weight: bold
+        }
+
+        #htmlTxt .space {
+            margin-left: 7px
+        }
+
+        #htmlTxt .comments {
+            color: #3f7f5f
+        }
+
+        #htmlTxt .chin {
+            letter-spacing: 2px;
+        }
+
+        #htmlTxt .pl10 {
+            padding-left: 10px;
+        }
+    </style>
 </head>
 
 <body>
-<div id="main">
-	<h2>1、打印纯英文</h2>
-    <div class="item">
-    Dynamic Web TWAIN is a browser-based document scanning SDK specifically designed for web applications. With just a few lines of JavaScript code, you can develop robust applications to scan documents from TWAIN, SANE and ICA compatible scanners, edit the scanned images and save them to a local/server file system or document repository.If you need to implement document scanning into your .NET WinForms or WPF application, you can check out our Dynamic .NET TWAIN SDK.
-    </div>
-    <h2>2、打印纯中文</h2>
-    <div class="item">
-    一天叶子离开了,它问树：你为什么不挽留我，树默默的说：因为风在追你，所以我选择了放弃；叶子问风：你为什么要追求我，风平淡的回答：因为树放弃了你，我看你孤独就追你了。叶子沉默了，是树太懦弱，还是自己太傻。
-　　终有一天叶子感到筋疲力尽了，于是选择了随风漂泊，它问树：你为什么不挽留我?树骄傲的说：世界上不只有你一片叶子；叶子伤心走了，它问风：你为什么要追求我，风真诚的回答：因为世界上没有相同的两片叶子。叶子沉默了，是树不懂得爱,还是风太执着。
-    </div>
-    <h2>3、打印代码块</h2>
-    <pre class="item" style="white-space:pre-wrap">
+    <div id="main">
+        <h2>1、打印纯英文</h2>
+        <div class="item">
+            Dynamic Web TWAIN is a browser-based document scanning SDK specifically designed for web applications. With
+            just a few lines of JavaScript code, you can develop robust applications to scan documents from TWAIN, SANE
+            and ICA compatible scanners, edit the scanned images and save them to a local/server file system or document
+            repository.If you need to implement document scanning into your .NET WinForms or WPF application, you can
+            check out our Dynamic .NET TWAIN SDK.
+        </div>
+        <h2>2、打印纯中文</h2>
+        <div class="item">
+            一天叶子离开了,它问树：你为什么不挽留我，树默默的说：因为风在追你，所以我选择了放弃；叶子问风：你为什么要追求我，风平淡的回答：因为树放弃了你，我看你孤独就追你了。叶子沉默了，是树太懦弱，还是自己太傻。
+            　　终有一天叶子感到筋疲力尽了，于是选择了随风漂泊，它问树：你为什么不挽留我?树骄傲的说：世界上不只有你一片叶子；叶子伤心走了，它问风：你为什么要追求我，风真诚的回答：因为世界上没有相同的两片叶子。叶子沉默了，是树不懂得爱,还是风太执着。
+        </div>
+        <h2>3、打印代码块</h2>
+        <pre class="item" style="white-space:pre-wrap">
 &lt;input type="button" value="Scan" onclick="AcquireImage();" />
 &lt;script type="text/javascript">
 var DWObject;
@@ -48,39 +89,40 @@ function AcquireImage(){
 }
 &lt;/script>
     </pre>
-    <h2>4、打印带样式的 html 文本</h2>
-    <div id="htmlTxt" class="item">
-    	<span class="comments">/**</span><br />
-        <span class="comments pl10">*2015—10-08,</span><br />
-        <span class="comments pl10">*2017-02-14.</span><br />
-        <span class="comments">*/</span><br />
-        Boy name = <span class="keyword">Mr</span> Liao<br />
-        Girl name = <span class="keyword">Ms</span> Zhou<br />
-        <span class="comments">// Fall in love river. </span><br />
-        The boy love the girl;<br />
-        <span class="comments">// They love each other.</span><br />
-        The girl loved the boy;<br />
-        <span class="comments">// AS time goes on.</span><br />
-        The boy can not be separated the girl;<br />
-        <span class="comments">// At the same time.</span><br />
-        The girl can not be separated the boy;<br />
-        <span class="comments">// Both wind and snow all over the sky.</span><br />
-        <span class="comments">// Whether on foot or 5 kilometers.</span><br />
-        <span class="keyword">The boy</span> very <span class="keyword">happy</span>;<br />
-        <span class="keyword">The girl</span> is also very <span class="keyword">happy</span>;<br />
-        <span class="comments">// Whether it is right now</span><br />
-        <span class="comments">// Still in the distant future.</span><br />
-        The boy has but one dream;<br />
-        <span class="comments">// The boy wants the girl could well have been happy.</span><br />
-        <br>
-        I want to say:<br />
-        Baby, I love you forever;<br />
-        <br />
-        -- Alvin
+        <h2>4、打印带样式的 html 文本</h2>
+        <div id="htmlTxt" class="item">
+            <span class="comments">/**</span><br />
+            <span class="comments pl10">*2015—10-08,</span><br />
+            <span class="comments pl10">*2017-02-14.</span><br />
+            <span class="comments">*/</span><br />
+            Boy name = <span class="keyword">Mr</span> Liao<br />
+            Girl name = <span class="keyword">Ms</span> Zhou<br />
+            <span class="comments">// Fall in love river. </span><br />
+            The boy love the girl;<br />
+            <span class="comments">// They love each other.</span><br />
+            The girl loved the boy;<br />
+            <span class="comments">// AS time goes on.</span><br />
+            The boy can not be separated the girl;<br />
+            <span class="comments">// At the same time.</span><br />
+            The girl can not be separated the boy;<br />
+            <span class="comments">// Both wind and snow all over the sky.</span><br />
+            <span class="comments">// Whether on foot or 5 kilometers.</span><br />
+            <span class="keyword">The boy</span> very <span class="keyword">happy</span>;<br />
+            <span class="keyword">The girl</span> is also very <span class="keyword">happy</span>;<br />
+            <span class="comments">// Whether it is right now</span><br />
+            <span class="comments">// Still in the distant future.</span><br />
+            The boy has but one dream;<br />
+            <span class="comments">// The boy wants the girl could well have been happy.</span><br />
+            <br>
+            I want to say:<br />
+            Baby, I love you forever;<br />
+            <br />
+            -- Alvin
+        </div>
     </div>
-</div>
-<script>
-$(".item").typewriter();
-</script>
+    <script>
+        $(".item").typewriter();
+    </script>
 </body>
+
 </html>
